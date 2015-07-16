@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>sklad_window</class>
- <widget class="QWidget" name="sklad_window">
+ <class>skladWindow</class>
+ <widget class="QDialog" name="skladWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>802</width>
-    <height>480</height>
+    <width>856</width>
+    <height>511</height>
    </rect>
   </property>
-  <property name="minimumSize">
-   <size>
-    <width>800</width>
-    <height>480</height>
-   </size>
-  </property>
   <property name="windowTitle">
-   <string>Состояние торговой точки, склада</string>
+   <string>skladWindow</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_7">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_11">
      <item>

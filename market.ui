@@ -27,7 +27,7 @@
     <property name="title">
      <string>Склад</string>
     </property>
-    <addaction name="action"/>
+    <addaction name="statusAction"/>
     <addaction name="separator"/>
     <addaction name="action_3"/>
     <addaction name="action_4"/>
@@ -111,7 +111,7 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="action">
+  <action name="statusAction">
    <property name="text">
     <string>Состояние</string>
    </property>
