@@ -27,71 +27,72 @@
     <property name="title">
      <string>Склад</string>
     </property>
-    <addaction name="statusAction"/>
+    <addaction name="sostoyanie"/>
     <addaction name="separator"/>
-    <addaction name="action_3"/>
-    <addaction name="action_4"/>
+    <addaction name="prihod"/>
+    <addaction name="vozvrat_post"/>
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
      <string>Торговля</string>
     </property>
-    <addaction name="action_5"/>
-    <addaction name="action_6"/>
+    <addaction name="prodaja"/>
+    <addaction name="vozvrat"/>
    </widget>
    <widget class="QMenu" name="menu_3">
     <property name="title">
      <string>Деньги</string>
     </property>
-    <addaction name="action_7"/>
+    <addaction name="kassa"/>
     <addaction name="separator"/>
-    <addaction name="action_9"/>
-    <addaction name="action_10"/>
+    <addaction name="viruchka"/>
+    <addaction name="rashod_kassa"/>
    </widget>
    <widget class="QMenu" name="menu_4">
     <property name="title">
      <string>Настройки</string>
     </property>
-    <addaction name="action_11"/>
-    <addaction name="action_12"/>
-    <addaction name="action_13"/>
+    <addaction name="system_settings"/>
+    <addaction name="workplace_settings"/>
+    <addaction name="print_settings"/>
     <addaction name="separator"/>
-    <addaction name="action_15"/>
-    <addaction name="action_16"/>
+    <addaction name="rekvizit"/>
+    <addaction name="kurs"/>
    </widget>
    <widget class="QMenu" name="menu_5">
     <property name="title">
      <string>Справочники</string>
     </property>
-    <addaction name="action_17"/>
+    <addaction name="spravochnik_tovar"/>
     <addaction name="separator"/>
-    <addaction name="action_19"/>
-    <addaction name="action_20"/>
+    <addaction name="spravochnik_client"/>
+    <addaction name="spravochnik_postavshik"/>
     <addaction name="separator"/>
-    <addaction name="action_22"/>
+    <addaction name="spravochnik_rashod"/>
    </widget>
    <widget class="QMenu" name="menu_6">
     <property name="title">
      <string>Печать</string>
     </property>
-    <addaction name="action_2"/>
-    <addaction name="action_8"/>
+    <addaction name="print_naklad"/>
+    <addaction name="print_chek"/>
     <addaction name="separator"/>
-    <addaction name="action_18"/>
+    <addaction name="cennik"/>
    </widget>
    <widget class="QMenu" name="menu_7">
     <property name="title">
      <string>Сервис</string>
     </property>
-    <addaction name="action_21"/>
-    <addaction name="action_23"/>
+    <addaction name="instruction"/>
+    <addaction name="about"/>
     <addaction name="separator"/>
-    <addaction name="action_25"/>
+    <addaction name="filtr"/>
    </widget>
-   <widget class="QMenu" name="menu_8">
+   <widget class="QMenu" name="exitApp">
     <property name="title">
      <string>Выход</string>
     </property>
+    <addaction name="ext"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
@@ -100,7 +101,7 @@
    <addaction name="menu_5"/>
    <addaction name="menu_6"/>
    <addaction name="menu_7"/>
-   <addaction name="menu_8"/>
+   <addaction name="exitApp"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -111,119 +112,124 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="statusAction">
+  <action name="sostoyanie">
    <property name="text">
     <string>Состояние</string>
    </property>
   </action>
-  <action name="action_3">
+  <action name="prihod">
    <property name="text">
     <string>Приходы</string>
    </property>
   </action>
-  <action name="action_4">
+  <action name="vozvrat_post">
    <property name="text">
     <string>Возвраты поставщикам</string>
    </property>
   </action>
-  <action name="action_5">
+  <action name="prodaja">
    <property name="text">
     <string>Продажи</string>
    </property>
   </action>
-  <action name="action_6">
+  <action name="vozvrat">
    <property name="text">
     <string>Возвраты</string>
    </property>
   </action>
-  <action name="action_7">
+  <action name="kassa">
    <property name="text">
     <string>Состояние кассы</string>
    </property>
   </action>
-  <action name="action_9">
+  <action name="viruchka">
    <property name="text">
     <string>Выручка</string>
    </property>
   </action>
-  <action name="action_10">
+  <action name="rashod_kassa">
    <property name="text">
     <string>Расходы</string>
    </property>
   </action>
-  <action name="action_11">
+  <action name="system_settings">
    <property name="text">
     <string>Системы</string>
    </property>
   </action>
-  <action name="action_12">
+  <action name="workplace_settings">
    <property name="text">
     <string>Рабочего места</string>
    </property>
   </action>
-  <action name="action_13">
+  <action name="print_settings">
    <property name="text">
     <string>Печати</string>
    </property>
   </action>
-  <action name="action_15">
+  <action name="rekvizit">
    <property name="text">
     <string>Реквизиты фирмы</string>
    </property>
   </action>
-  <action name="action_16">
+  <action name="kurs">
    <property name="text">
     <string>Курс рубля</string>
    </property>
   </action>
-  <action name="action_17">
+  <action name="spravochnik_tovar">
    <property name="text">
     <string>Товары</string>
    </property>
   </action>
-  <action name="action_19">
+  <action name="spravochnik_client">
    <property name="text">
     <string>Клиенты</string>
    </property>
   </action>
-  <action name="action_20">
+  <action name="spravochnik_postavshik">
    <property name="text">
     <string>Поставщики</string>
    </property>
   </action>
-  <action name="action_22">
+  <action name="spravochnik_rashod">
    <property name="text">
     <string>Статьи расходов</string>
    </property>
   </action>
-  <action name="action_2">
+  <action name="print_naklad">
    <property name="text">
     <string>Накладная</string>
    </property>
   </action>
-  <action name="action_8">
+  <action name="print_chek">
    <property name="text">
     <string>Товарный чек</string>
    </property>
   </action>
-  <action name="action_18">
+  <action name="cennik">
    <property name="text">
     <string>Ценники</string>
    </property>
   </action>
-  <action name="action_21">
+  <action name="instruction">
    <property name="text">
     <string>Инструкция</string>
    </property>
   </action>
-  <action name="action_23">
+  <action name="about">
    <property name="text">
     <string>О программе</string>
    </property>
   </action>
-  <action name="action_25">
+  <action name="filtr">
    <property name="text">
     <string>Фильтр</string>
+   </property>
+  </action>
+  <action name="ext">
+   <property name="text">
+    <string>Выход</string>
    </property>
   </action>
  </widget>

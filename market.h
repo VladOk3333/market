@@ -4,6 +4,11 @@
 #include <QtGui/QMainWindow>
 #include "ui_market.h"
 #include "skladwindow.h"
+#include "prihod.h"
+#include "vozvratpostavshik.h"
+#include "stdlib.h"
+#include <cstdio>
+#include <cstdlib>
 
 class market : public QMainWindow
 {
@@ -14,7 +19,10 @@ public:
 	~market();
 
 private slots:
-	void statusActionClicked();
+	void sostoyanieClicked();
+	void prihodClicked();
+	void vozvratPostavshikClicked();
+	void closeApp();
 
 private:
 	Ui::marketClass ui;
