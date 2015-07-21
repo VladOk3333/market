@@ -184,7 +184,6 @@ public:
         menu_7->addAction(about);
         menu_7->addSeparator();
         menu_7->addAction(filtr);
-        exitApp->addAction(ext);
 
         retranslateUi(marketClass);
 

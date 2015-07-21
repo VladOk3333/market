@@ -92,7 +92,6 @@
     <property name="title">
      <string>Выход</string>
     </property>
-    <addaction name="ext"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>

@@ -9,7 +9,7 @@ market::market(QWidget *parent, Qt::WFlags flags)
 	connect(ui.sostoyanie, SIGNAL(triggered(bool)), this, SLOT(sostoyanieClicked()));
 	connect(ui.prihod, SIGNAL(triggered(bool)), this, SLOT(prihodClicked()));
 	connect(ui.vozvrat_post, SIGNAL(triggered(bool)), this, SLOT(vozvratPostavshikClicked()));
-	connect(ui.ext, SIGNAL(triggered(bool)), this, SLOT(closeApp()));
+	connect(ui.exitApp, SIGNAL(	aboutToShow ()), this, SLOT(closeApp()));
 
 }
 
