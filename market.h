@@ -9,7 +9,10 @@
 #include "stdlib.h"
 #include <cstdio>
 #include <cstdlib>
-
+#include "spravtovar.h"
+#include "FunctionsGroup.h"
+#include "FunctionsProducts.h"
+#include "company.h"
 class market : public QMainWindow
 {
 	Q_OBJECT
@@ -17,15 +20,19 @@ class market : public QMainWindow
 public:
 	market(QWidget *parent = 0, Qt::WFlags flags = 0);
 	~market();
+	FunctionsGroup object;
 
 private slots:
 	void sostoyanieClicked();
 	void prihodClicked();
 	void vozvratPostavshikClicked();
 	void closeApp();
+	void productsClicked();
+	void rekvizitClicked();
 
 private:
 	Ui::marketClass ui;
+	FunctionsGroup obj;  
 	//skladWindow *window;
 };
 

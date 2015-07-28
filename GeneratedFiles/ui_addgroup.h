@@ -18,9 +18,9 @@
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
+#include <QtGui/QListWidget>
 #include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
-#include <QtGui/QTableWidget>
 #include <QtGui/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
@@ -29,18 +29,18 @@ class Ui_addGroup
 {
 public:
     QGridLayout *gridLayout;
-    QTableWidget *tableWidget;
     QVBoxLayout *verticalLayout;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
-    QPushButton *pushButton_5;
-    QPushButton *pushButton_6;
+    QPushButton *addGroupsFind;
+    QPushButton *addingGroupAdd;
+    QPushButton *addGroupChange;
+    QPushButton *addGroupDel;
+    QPushButton *addGroupSort;
+    QPushButton *addGroupExit;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QLabel *label;
     QLabel *label_2;
+    QListWidget *listGroups;
 
     void setupUi(QDialog *addGroup)
     {
@@ -51,43 +51,38 @@ public:
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        tableWidget = new QTableWidget(addGroup);
-        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
-
-        gridLayout->addWidget(tableWidget, 0, 0, 1, 1);
-
         verticalLayout = new QVBoxLayout();
         verticalLayout->setSpacing(6);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        pushButton = new QPushButton(addGroup);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        addGroupsFind = new QPushButton(addGroup);
+        addGroupsFind->setObjectName(QString::fromUtf8("addGroupsFind"));
 
-        verticalLayout->addWidget(pushButton);
+        verticalLayout->addWidget(addGroupsFind);
 
-        pushButton_2 = new QPushButton(addGroup);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        addingGroupAdd = new QPushButton(addGroup);
+        addingGroupAdd->setObjectName(QString::fromUtf8("addingGroupAdd"));
 
-        verticalLayout->addWidget(pushButton_2);
+        verticalLayout->addWidget(addingGroupAdd);
 
-        pushButton_3 = new QPushButton(addGroup);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        addGroupChange = new QPushButton(addGroup);
+        addGroupChange->setObjectName(QString::fromUtf8("addGroupChange"));
 
-        verticalLayout->addWidget(pushButton_3);
+        verticalLayout->addWidget(addGroupChange);
 
-        pushButton_4 = new QPushButton(addGroup);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        addGroupDel = new QPushButton(addGroup);
+        addGroupDel->setObjectName(QString::fromUtf8("addGroupDel"));
 
-        verticalLayout->addWidget(pushButton_4);
+        verticalLayout->addWidget(addGroupDel);
 
-        pushButton_5 = new QPushButton(addGroup);
-        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
+        addGroupSort = new QPushButton(addGroup);
+        addGroupSort->setObjectName(QString::fromUtf8("addGroupSort"));
 
-        verticalLayout->addWidget(pushButton_5);
+        verticalLayout->addWidget(addGroupSort);
 
-        pushButton_6 = new QPushButton(addGroup);
-        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
+        addGroupExit = new QPushButton(addGroup);
+        addGroupExit->setObjectName(QString::fromUtf8("addGroupExit"));
 
-        verticalLayout->addWidget(pushButton_6);
+        verticalLayout->addWidget(addGroupExit);
 
 
         gridLayout->addLayout(verticalLayout, 0, 1, 1, 1);
@@ -112,6 +107,11 @@ public:
 
         gridLayout->addLayout(horizontalLayout, 1, 0, 1, 1);
 
+        listGroups = new QListWidget(addGroup);
+        listGroups->setObjectName(QString::fromUtf8("listGroups"));
+
+        gridLayout->addWidget(listGroups, 0, 0, 1, 1);
+
 
         retranslateUi(addGroup);
 
@@ -121,12 +121,12 @@ public:
     void retranslateUi(QDialog *addGroup)
     {
         addGroup->setWindowTitle(QApplication::translate("addGroup", "addGroup", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("addGroup", "\320\237\320\276\320\270\321\201\320\272", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setText(QApplication::translate("addGroup", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
-        pushButton_3->setText(QApplication::translate("addGroup", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
-        pushButton_4->setText(QApplication::translate("addGroup", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
-        pushButton_5->setText(QApplication::translate("addGroup", "\320\237\320\276\321\200\321\217\320\264\320\276\320\272", 0, QApplication::UnicodeUTF8));
-        pushButton_6->setText(QApplication::translate("addGroup", "\320\222\321\213\321\205\320\276\320\264", 0, QApplication::UnicodeUTF8));
+        addGroupsFind->setText(QApplication::translate("addGroup", "\320\237\320\276\320\270\321\201\320\272", 0, QApplication::UnicodeUTF8));
+        addingGroupAdd->setText(QApplication::translate("addGroup", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
+        addGroupChange->setText(QApplication::translate("addGroup", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
+        addGroupDel->setText(QApplication::translate("addGroup", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
+        addGroupSort->setText(QApplication::translate("addGroup", "\320\237\320\276\321\200\321\217\320\264\320\276\320\272", 0, QApplication::UnicodeUTF8));
+        addGroupExit->setText(QApplication::translate("addGroup", "\320\222\321\213\321\205\320\276\320\264", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("addGroup", "\320\222\321\201\320\265\320\263\320\276", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("addGroup", "\320\272\320\276\320\273\320\270\321\207\320\265\321\201\321\202\320\262\320\276", 0, QApplication::UnicodeUTF8));
     } // retranslateUi

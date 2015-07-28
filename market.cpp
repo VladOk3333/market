@@ -10,6 +10,8 @@ market::market(QWidget *parent, Qt::WFlags flags)
 	connect(ui.prihod, SIGNAL(triggered(bool)), this, SLOT(prihodClicked()));
 	connect(ui.vozvrat_post, SIGNAL(triggered(bool)), this, SLOT(vozvratPostavshikClicked()));
 	connect(ui.exitApp, SIGNAL(	aboutToShow ()), this, SLOT(closeApp()));
+	connect(ui.spravochnik_tovar, SIGNAL(triggered(bool)), this, SLOT(productsClicked()));
+	connect(ui.rekvizit, SIGNAL(triggered(bool)), this, SLOT(rekvizitClicked()));
 
 }
 
@@ -18,6 +20,12 @@ market::~market()
 
 }
 
+void market::rekvizitClicked()
+{
+	Company window;
+	window.setWindowFlags(Qt::WindowCloseButtonHint);
+	window.exec();
+}
 void market::sostoyanieClicked()
 {
 	skladWindow window;
@@ -31,8 +39,6 @@ void market::prihodClicked()
 	Prihod window;
 	window.setWindowFlags(Qt::WindowCloseButtonHint);
 	window.exec();
-	//window = new skladWindow(this);
-	//window->show();
 }
 
 void market::vozvratPostavshikClicked()
@@ -40,8 +46,13 @@ void market::vozvratPostavshikClicked()
 	Prihod window;
 	window.setWindowFlags(Qt::WindowCloseButtonHint);
 	window.exec();
-	//window = new skladWindow(this);
-	//window->show();
+}
+
+void market::productsClicked()
+{
+	
+	spravTovar *window = new spravTovar(object, this);
+	window->show();
 }
 
 void market::closeApp()

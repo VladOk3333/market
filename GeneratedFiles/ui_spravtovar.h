@@ -35,13 +35,13 @@ public:
     QLabel *label_5;
     QHBoxLayout *horizontalLayout_2;
     QComboBox *comboBox;
-    QToolButton *toolButton;
+    QToolButton *addingGroup;
     QLineEdit *lineEdit;
     QLabel *label_3;
     QVBoxLayout *verticalLayout;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
+    QPushButton *addingGroupAdd;
     QPushButton *pushButton_4;
     QPushButton *pushButton_5;
     QPushButton *pushButton_6;
@@ -78,10 +78,10 @@ public:
 
         horizontalLayout_2->addWidget(comboBox);
 
-        toolButton = new QToolButton(spravTovar);
-        toolButton->setObjectName(QString::fromUtf8("toolButton"));
+        addingGroup = new QToolButton(spravTovar);
+        addingGroup->setObjectName(QString::fromUtf8("addingGroup"));
 
-        horizontalLayout_2->addWidget(toolButton);
+        horizontalLayout_2->addWidget(addingGroup);
 
 
         gridLayout->addLayout(horizontalLayout_2, 1, 0, 1, 1);
@@ -109,10 +109,10 @@ public:
 
         verticalLayout->addWidget(pushButton_2);
 
-        pushButton_3 = new QPushButton(spravTovar);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        addingGroupAdd = new QPushButton(spravTovar);
+        addingGroupAdd->setObjectName(QString::fromUtf8("addingGroupAdd"));
 
-        verticalLayout->addWidget(pushButton_3);
+        verticalLayout->addWidget(addingGroupAdd);
 
         pushButton_4 = new QPushButton(spravTovar);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
@@ -164,11 +164,11 @@ public:
         spravTovar->setWindowTitle(QApplication::translate("spravTovar", "spravTovar", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("spravTovar", "\320\223\321\200\321\203\320\277\320\277\320\260", 0, QApplication::UnicodeUTF8));
         label_5->setText(QApplication::translate("spravTovar", "\320\244\320\270\320\273\321\214\321\202\321\200", 0, QApplication::UnicodeUTF8));
-        toolButton->setText(QApplication::translate("spravTovar", "...", 0, QApplication::UnicodeUTF8));
+        addingGroup->setText(QApplication::translate("spravTovar", "...", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("spravTovar", "\320\235\320\260\320\270\320\274\320\265\320\275\320\276\320\262\320\260\320\275\320\270\320\265", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("spravTovar", "\320\237\320\276\320\270\321\201\320\272", 0, QApplication::UnicodeUTF8));
         pushButton_2->setText(QApplication::translate("spravTovar", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
-        pushButton_3->setText(QApplication::translate("spravTovar", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
+        addingGroupAdd->setText(QApplication::translate("spravTovar", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
         pushButton_4->setText(QApplication::translate("spravTovar", "\320\232\320\276\320\277\320\270\321\217", 0, QApplication::UnicodeUTF8));
         pushButton_5->setText(QApplication::translate("spravTovar", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
         pushButton_6->setText(QApplication::translate("spravTovar", "\320\236\320\232", 0, QApplication::UnicodeUTF8));

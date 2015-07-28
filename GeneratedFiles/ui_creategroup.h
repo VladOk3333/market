@@ -30,10 +30,10 @@ public:
     QGridLayout *gridLayout;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
-    QLineEdit *lineEdit;
+    QLineEdit *groupTitle;
     QHBoxLayout *horizontalLayout_2;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
+    QPushButton *OKcreateGroup;
+    QPushButton *CancelCreateGroup;
 
     void setupUi(QDialog *createGroup)
     {
@@ -57,10 +57,10 @@ public:
 
         horizontalLayout->addWidget(label);
 
-        lineEdit = new QLineEdit(createGroup);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        groupTitle = new QLineEdit(createGroup);
+        groupTitle->setObjectName(QString::fromUtf8("groupTitle"));
 
-        horizontalLayout->addWidget(lineEdit);
+        horizontalLayout->addWidget(groupTitle);
 
 
         gridLayout->addLayout(horizontalLayout, 0, 0, 1, 1);
@@ -68,15 +68,15 @@ public:
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        pushButton = new QPushButton(createGroup);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        OKcreateGroup = new QPushButton(createGroup);
+        OKcreateGroup->setObjectName(QString::fromUtf8("OKcreateGroup"));
 
-        horizontalLayout_2->addWidget(pushButton);
+        horizontalLayout_2->addWidget(OKcreateGroup);
 
-        pushButton_2 = new QPushButton(createGroup);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        CancelCreateGroup = new QPushButton(createGroup);
+        CancelCreateGroup->setObjectName(QString::fromUtf8("CancelCreateGroup"));
 
-        horizontalLayout_2->addWidget(pushButton_2);
+        horizontalLayout_2->addWidget(CancelCreateGroup);
 
 
         gridLayout->addLayout(horizontalLayout_2, 1, 0, 1, 1);
@@ -94,8 +94,8 @@ public:
     {
         createGroup->setWindowTitle(QApplication::translate("createGroup", "createGroup", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("createGroup", "\320\235\320\260\320\267\320\262\320\260\320\275\320\270\320\265", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("createGroup", "OK", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setText(QApplication::translate("createGroup", "\320\236\321\202\320\274\320\265\320\275\320\260", 0, QApplication::UnicodeUTF8));
+        OKcreateGroup->setText(QApplication::translate("createGroup", "OK", 0, QApplication::UnicodeUTF8));
+        CancelCreateGroup->setText(QApplication::translate("createGroup", "\320\236\321\202\320\274\320\265\320\275\320\260", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

@@ -17,8 +17,8 @@
 #include <QtGui/QGridLayout>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
+#include <QtGui/QListWidget>
 #include <QtGui/QPushButton>
-#include <QtGui/QTableWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -26,14 +26,14 @@ class Ui_sortGroup
 {
 public:
     QGridLayout *gridLayout_2;
+    QListWidget *sortGroupList;
     QGridLayout *gridLayout;
-    QTableWidget *tableWidget;
     QHBoxLayout *horizontalLayout;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
+    QPushButton *sortGroupUp;
+    QPushButton *sortGroupDown;
     QHBoxLayout *horizontalLayout_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
+    QPushButton *sortGroupChange;
+    QPushButton *sortGroupCancel;
 
     void setupUi(QDialog *sortGroup)
     {
@@ -46,48 +46,48 @@ public:
         gridLayout_2->setSpacing(6);
         gridLayout_2->setContentsMargins(11, 11, 11, 11);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        sortGroupList = new QListWidget(sortGroup);
+        sortGroupList->setObjectName(QString::fromUtf8("sortGroupList"));
+
+        gridLayout_2->addWidget(sortGroupList, 0, 0, 1, 1);
+
         gridLayout = new QGridLayout();
         gridLayout->setSpacing(6);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        tableWidget = new QTableWidget(sortGroup);
-        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
-
-        gridLayout->addWidget(tableWidget, 0, 0, 1, 1);
-
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        pushButton = new QPushButton(sortGroup);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        sortGroupUp = new QPushButton(sortGroup);
+        sortGroupUp->setObjectName(QString::fromUtf8("sortGroupUp"));
 
-        horizontalLayout->addWidget(pushButton);
+        horizontalLayout->addWidget(sortGroupUp);
 
-        pushButton_2 = new QPushButton(sortGroup);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        sortGroupDown = new QPushButton(sortGroup);
+        sortGroupDown->setObjectName(QString::fromUtf8("sortGroupDown"));
 
-        horizontalLayout->addWidget(pushButton_2);
+        horizontalLayout->addWidget(sortGroupDown);
 
 
-        gridLayout->addLayout(horizontalLayout, 1, 0, 1, 1);
+        gridLayout->addLayout(horizontalLayout, 0, 0, 1, 1);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        pushButton_3 = new QPushButton(sortGroup);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        sortGroupChange = new QPushButton(sortGroup);
+        sortGroupChange->setObjectName(QString::fromUtf8("sortGroupChange"));
 
-        horizontalLayout_2->addWidget(pushButton_3);
+        horizontalLayout_2->addWidget(sortGroupChange);
 
-        pushButton_4 = new QPushButton(sortGroup);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        sortGroupCancel = new QPushButton(sortGroup);
+        sortGroupCancel->setObjectName(QString::fromUtf8("sortGroupCancel"));
 
-        horizontalLayout_2->addWidget(pushButton_4);
-
-
-        gridLayout->addLayout(horizontalLayout_2, 2, 0, 1, 1);
+        horizontalLayout_2->addWidget(sortGroupCancel);
 
 
-        gridLayout_2->addLayout(gridLayout, 0, 0, 1, 1);
+        gridLayout->addLayout(horizontalLayout_2, 1, 0, 1, 1);
+
+
+        gridLayout_2->addLayout(gridLayout, 1, 0, 1, 1);
 
 
         retranslateUi(sortGroup);
@@ -98,10 +98,10 @@ public:
     void retranslateUi(QDialog *sortGroup)
     {
         sortGroup->setWindowTitle(QApplication::translate("sortGroup", "sortGroup", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("sortGroup", "\320\222\320\262\320\265\321\200\321\205 \320\277\320\276 \321\201\320\277\320\270\321\201\320\272\321\203", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setText(QApplication::translate("sortGroup", "\320\222\320\275\320\270\320\267 \320\277\320\276 \321\201\320\277\320\270\321\201\320\272\321\203", 0, QApplication::UnicodeUTF8));
-        pushButton_3->setText(QApplication::translate("sortGroup", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
-        pushButton_4->setText(QApplication::translate("sortGroup", "\320\236\321\202\320\274\320\265\320\275\320\260", 0, QApplication::UnicodeUTF8));
+        sortGroupUp->setText(QApplication::translate("sortGroup", "\320\222\320\262\320\265\321\200\321\205 \320\277\320\276 \321\201\320\277\320\270\321\201\320\272\321\203", 0, QApplication::UnicodeUTF8));
+        sortGroupDown->setText(QApplication::translate("sortGroup", "\320\222\320\275\320\270\320\267 \320\277\320\276 \321\201\320\277\320\270\321\201\320\272\321\203", 0, QApplication::UnicodeUTF8));
+        sortGroupChange->setText(QApplication::translate("sortGroup", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
+        sortGroupCancel->setText(QApplication::translate("sortGroup", "\320\236\321\202\320\274\320\265\320\275\320\260", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
