@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>364</width>
-    <height>276</height>
+    <width>333</width>
+    <height>206</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -53,16 +53,13 @@
        <item row="0" column="1">
         <layout class="QGridLayout" name="gridLayout">
          <item row="0" column="0" colspan="2">
-          <widget class="QLineEdit" name="lineEdit"/>
+          <widget class="QLineEdit" name="addProductName"/>
          </item>
          <item row="1" column="0" colspan="2">
-          <widget class="QLineEdit" name="lineEdit_2"/>
+          <widget class="QLineEdit" name="addProductCountry"/>
          </item>
          <item row="2" column="0" colspan="2">
-          <widget class="QLineEdit" name="lineEdit_3"/>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLineEdit" name="lineEdit_4"/>
+          <widget class="QLineEdit" name="addProductIzm"/>
          </item>
          <item row="3" column="1">
           <widget class="QLabel" name="label_5">
@@ -70,6 +67,9 @@
             <string>%</string>
            </property>
           </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QDoubleSpinBox" name="addProductNDS"/>
          </item>
         </layout>
        </item>
@@ -85,7 +85,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox">
+        <widget class="QComboBox" name="addProductGroup">
          <property name="minimumSize">
           <size>
            <width>270</width>
@@ -114,14 +114,14 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="addProductAdd">
        <property name="text">
         <string>Добавить</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="addProductExit">
        <property name="text">
         <string>Выход</string>
        </property>
@@ -143,20 +143,6 @@
     </layout>
    </item>
   </layout>
-  <zorder>lineEdit</zorder>
-  <zorder>lineEdit_2</zorder>
-  <zorder>lineEdit_3</zorder>
-  <zorder>lineEdit_4</zorder>
-  <zorder>label</zorder>
-  <zorder>label_2</zorder>
-  <zorder>label_3</zorder>
-  <zorder>label_4</zorder>
-  <zorder>label_5</zorder>
-  <zorder>lineEdit_4</zorder>
-  <zorder>comboBox</zorder>
-  <zorder>label_6</zorder>
-  <zorder>pushButton</zorder>
-  <zorder>pushButton_2</zorder>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

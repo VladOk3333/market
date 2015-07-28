@@ -31,8 +31,6 @@ void market::sostoyanieClicked()
 	skladWindow window;
 	window.setWindowFlags(Qt::WindowCloseButtonHint);
 	window.exec();
-	//window = new skladWindow(this);
-	//window->show();
 }
 void market::prihodClicked()
 {
@@ -43,15 +41,12 @@ void market::prihodClicked()
 
 void market::vozvratPostavshikClicked()
 {
-	Prihod window;
-	window.setWindowFlags(Qt::WindowCloseButtonHint);
-	window.exec();
 }
 
 void market::productsClicked()
 {
 	
-	spravTovar *window = new spravTovar(object, this);
+	spravTovar *window = new spravTovar(object1, object, this);
 	window->show();
 }
 

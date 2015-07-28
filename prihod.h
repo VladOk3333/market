@@ -14,6 +14,9 @@ public:
 
 private:
 	Ui::Prihod ui;
+
+	private slots:
+		void prihodExit();
 };
 
 #endif // PRIHOD_H

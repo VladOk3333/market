@@ -21,6 +21,7 @@ public:
 	market(QWidget *parent = 0, Qt::WFlags flags = 0);
 	~market();
 	FunctionsGroup object;
+	FunctionsProducts object1;
 
 private slots:
 	void sostoyanieClicked();
@@ -33,7 +34,6 @@ private slots:
 private:
 	Ui::marketClass ui;
 	FunctionsGroup obj;  
-	//skladWindow *window;
 };
 
 #endif // MARKET_H

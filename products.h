@@ -8,8 +8,8 @@ public:
 	QString title;
 	QString country;
 	QString izmer;
-	int NDS;
-	QString group;
-	int id;
+	float NDS;
+	int group;
+
 };
 

@@ -34,14 +34,14 @@ public:
     QHBoxLayout *horizontalLayout_11;
     QVBoxLayout *verticalLayout_5;
     QLabel *label_14;
-    QComboBox *comboBox_3;
+    QComboBox *skladWindowGroups;
     QSpacerItem *horizontalSpacer_10;
     QVBoxLayout *verticalLayout_6;
     QLabel *label_15;
     QLineEdit *lineEdit_3;
     QSpacerItem *horizontalSpacer_11;
-    QPushButton *pushButton_5;
-    QTableWidget *tableWidget;
+    QPushButton *skladWindowSearch;
+    QTableWidget *skladWindowList;
     QHBoxLayout *horizontalLayout_9;
     QLabel *label_11;
     QSpacerItem *horizontalSpacer_9;
@@ -49,9 +49,9 @@ public:
     QLabel *label_12;
     QLabel *label_13;
     QHBoxLayout *horizontalLayout_12;
-    QCheckBox *checkBox_3;
+    QCheckBox *skladWindowAll;
     QSpacerItem *horizontalSpacer_12;
-    QPushButton *pushButton_6;
+    QPushButton *skladWindowExit;
 
     void setupUi(QDialog *skladWindow)
     {
@@ -73,10 +73,10 @@ public:
 
         verticalLayout_5->addWidget(label_14);
 
-        comboBox_3 = new QComboBox(skladWindow);
-        comboBox_3->setObjectName(QString::fromUtf8("comboBox_3"));
+        skladWindowGroups = new QComboBox(skladWindow);
+        skladWindowGroups->setObjectName(QString::fromUtf8("skladWindowGroups"));
 
-        verticalLayout_5->addWidget(comboBox_3);
+        verticalLayout_5->addWidget(skladWindowGroups);
 
 
         horizontalLayout_11->addLayout(verticalLayout_5);
@@ -105,18 +105,18 @@ public:
 
         horizontalLayout_11->addItem(horizontalSpacer_11);
 
-        pushButton_5 = new QPushButton(skladWindow);
-        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
+        skladWindowSearch = new QPushButton(skladWindow);
+        skladWindowSearch->setObjectName(QString::fromUtf8("skladWindowSearch"));
 
-        horizontalLayout_11->addWidget(pushButton_5);
+        horizontalLayout_11->addWidget(skladWindowSearch);
 
 
         verticalLayout->addLayout(horizontalLayout_11);
 
-        tableWidget = new QTableWidget(skladWindow);
-        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
+        skladWindowList = new QTableWidget(skladWindow);
+        skladWindowList->setObjectName(QString::fromUtf8("skladWindowList"));
 
-        verticalLayout->addWidget(tableWidget);
+        verticalLayout->addWidget(skladWindowList);
 
         horizontalLayout_9 = new QHBoxLayout();
         horizontalLayout_9->setSpacing(6);
@@ -152,19 +152,19 @@ public:
         horizontalLayout_12 = new QHBoxLayout();
         horizontalLayout_12->setSpacing(6);
         horizontalLayout_12->setObjectName(QString::fromUtf8("horizontalLayout_12"));
-        checkBox_3 = new QCheckBox(skladWindow);
-        checkBox_3->setObjectName(QString::fromUtf8("checkBox_3"));
+        skladWindowAll = new QCheckBox(skladWindow);
+        skladWindowAll->setObjectName(QString::fromUtf8("skladWindowAll"));
 
-        horizontalLayout_12->addWidget(checkBox_3);
+        horizontalLayout_12->addWidget(skladWindowAll);
 
         horizontalSpacer_12 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_12->addItem(horizontalSpacer_12);
 
-        pushButton_6 = new QPushButton(skladWindow);
-        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
+        skladWindowExit = new QPushButton(skladWindow);
+        skladWindowExit->setObjectName(QString::fromUtf8("skladWindowExit"));
 
-        horizontalLayout_12->addWidget(pushButton_6);
+        horizontalLayout_12->addWidget(skladWindowExit);
 
 
         verticalLayout->addLayout(horizontalLayout_12);
@@ -180,12 +180,12 @@ public:
         skladWindow->setWindowTitle(QApplication::translate("skladWindow", "skladWindow", 0, QApplication::UnicodeUTF8));
         label_14->setText(QApplication::translate("skladWindow", "\320\223\321\200\321\203\320\277\320\277\320\260", 0, QApplication::UnicodeUTF8));
         label_15->setText(QApplication::translate("skladWindow", "\320\244\320\270\320\273\321\214\321\202\321\200", 0, QApplication::UnicodeUTF8));
-        pushButton_5->setText(QApplication::translate("skladWindow", "\320\237\320\276\320\270\321\201\320\272", 0, QApplication::UnicodeUTF8));
+        skladWindowSearch->setText(QApplication::translate("skladWindow", "\320\237\320\276\320\270\321\201\320\272", 0, QApplication::UnicodeUTF8));
         label_11->setText(QApplication::translate("skladWindow", "\320\235\320\260\320\270\320\274\320\265\320\275\320\276\320\262\320\260\320\275\320\270\320\265 \321\202\320\276\320\262\320\260\321\200\320\260", 0, QApplication::UnicodeUTF8));
         label_12->setText(QApplication::translate("skladWindow", "\320\235\320\276\320\274\320\265\321\200 \320\267\320\260\320\277\320\270\321\201\320\270", 0, QApplication::UnicodeUTF8));
         label_13->setText(QApplication::translate("skladWindow", "\320\224\320\260\321\202\320\260 \320\264\320\276\320\261\320\260\320\262\320\273\320\265\320\275\320\270\321\217", 0, QApplication::UnicodeUTF8));
-        checkBox_3->setText(QApplication::translate("skladWindow", "\320\222\321\201\320\265 \321\202\320\276\320\262\320\260\321\200\321\213", 0, QApplication::UnicodeUTF8));
-        pushButton_6->setText(QApplication::translate("skladWindow", "OK", 0, QApplication::UnicodeUTF8));
+        skladWindowAll->setText(QApplication::translate("skladWindow", "\320\222\321\201\320\265 \321\202\320\276\320\262\320\260\321\200\321\213", 0, QApplication::UnicodeUTF8));
+        skladWindowExit->setText(QApplication::translate("skladWindow", "OK", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

@@ -19,10 +19,6 @@ public:
 	createGroup *window;
 	sortGroup *window1;
 	createGroup *window2;
-
-	//FunctionsGroup aaa;
-	//QString str;
-
 private:
 	Ui::addGroup ui;
 
@@ -35,6 +31,7 @@ private:
 		void addGroupSort();
 		void deleteGroup();
 		void addGroupIzm();
+		void addGroupExit();
 };
 
 #endif // ADDGROUP_H

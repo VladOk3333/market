@@ -15,5 +15,6 @@ public:
 	void addGroup(QString temp);
 	bool SaveGroupFile(QString filename);
 	void editGroup(int index, QString add_group);
+	bool LoadGroupFile(QString filename);
 };
 

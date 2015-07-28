@@ -15,6 +15,7 @@
 #include <QtGui/QButtonGroup>
 #include <QtGui/QComboBox>
 #include <QtGui/QDialog>
+#include <QtGui/QDoubleSpinBox>
 #include <QtGui/QGridLayout>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
@@ -38,25 +39,25 @@ public:
     QLabel *label_3;
     QLabel *label_4;
     QGridLayout *gridLayout;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
-    QLineEdit *lineEdit_3;
-    QLineEdit *lineEdit_4;
+    QLineEdit *addProductName;
+    QLineEdit *addProductCountry;
+    QLineEdit *addProductIzm;
     QLabel *label_5;
+    QDoubleSpinBox *addProductNDS;
     QHBoxLayout *horizontalLayout;
     QLabel *label_6;
-    QComboBox *comboBox;
+    QComboBox *addProductGroup;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
+    QPushButton *addProductAdd;
+    QPushButton *addProductExit;
     QSpacerItem *horizontalSpacer_2;
 
     void setupUi(QDialog *addProduct)
     {
         if (addProduct->objectName().isEmpty())
             addProduct->setObjectName(QString::fromUtf8("addProduct"));
-        addProduct->resize(364, 276);
+        addProduct->resize(333, 206);
         gridLayout_3 = new QGridLayout(addProduct);
         gridLayout_3->setSpacing(6);
         gridLayout_3->setContentsMargins(11, 11, 11, 11);
@@ -96,30 +97,30 @@ public:
         gridLayout = new QGridLayout();
         gridLayout->setSpacing(6);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        lineEdit = new QLineEdit(addProduct);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        addProductName = new QLineEdit(addProduct);
+        addProductName->setObjectName(QString::fromUtf8("addProductName"));
 
-        gridLayout->addWidget(lineEdit, 0, 0, 1, 2);
+        gridLayout->addWidget(addProductName, 0, 0, 1, 2);
 
-        lineEdit_2 = new QLineEdit(addProduct);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        addProductCountry = new QLineEdit(addProduct);
+        addProductCountry->setObjectName(QString::fromUtf8("addProductCountry"));
 
-        gridLayout->addWidget(lineEdit_2, 1, 0, 1, 2);
+        gridLayout->addWidget(addProductCountry, 1, 0, 1, 2);
 
-        lineEdit_3 = new QLineEdit(addProduct);
-        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+        addProductIzm = new QLineEdit(addProduct);
+        addProductIzm->setObjectName(QString::fromUtf8("addProductIzm"));
 
-        gridLayout->addWidget(lineEdit_3, 2, 0, 1, 2);
-
-        lineEdit_4 = new QLineEdit(addProduct);
-        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
-
-        gridLayout->addWidget(lineEdit_4, 3, 0, 1, 1);
+        gridLayout->addWidget(addProductIzm, 2, 0, 1, 2);
 
         label_5 = new QLabel(addProduct);
         label_5->setObjectName(QString::fromUtf8("label_5"));
 
         gridLayout->addWidget(label_5, 3, 1, 1, 1);
+
+        addProductNDS = new QDoubleSpinBox(addProduct);
+        addProductNDS->setObjectName(QString::fromUtf8("addProductNDS"));
+
+        gridLayout->addWidget(addProductNDS, 3, 0, 1, 1);
 
 
         gridLayout_2->addLayout(gridLayout, 0, 1, 1, 1);
@@ -135,11 +136,11 @@ public:
 
         horizontalLayout->addWidget(label_6);
 
-        comboBox = new QComboBox(addProduct);
-        comboBox->setObjectName(QString::fromUtf8("comboBox"));
-        comboBox->setMinimumSize(QSize(270, 0));
+        addProductGroup = new QComboBox(addProduct);
+        addProductGroup->setObjectName(QString::fromUtf8("addProductGroup"));
+        addProductGroup->setMinimumSize(QSize(270, 0));
 
-        horizontalLayout->addWidget(comboBox);
+        horizontalLayout->addWidget(addProductGroup);
 
 
         verticalLayout_2->addLayout(horizontalLayout);
@@ -154,15 +155,15 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer);
 
-        pushButton = new QPushButton(addProduct);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        addProductAdd = new QPushButton(addProduct);
+        addProductAdd->setObjectName(QString::fromUtf8("addProductAdd"));
 
-        horizontalLayout_2->addWidget(pushButton);
+        horizontalLayout_2->addWidget(addProductAdd);
 
-        pushButton_2 = new QPushButton(addProduct);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        addProductExit = new QPushButton(addProduct);
+        addProductExit->setObjectName(QString::fromUtf8("addProductExit"));
 
-        horizontalLayout_2->addWidget(pushButton_2);
+        horizontalLayout_2->addWidget(addProductExit);
 
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -171,20 +172,6 @@ public:
 
         gridLayout_3->addLayout(horizontalLayout_2, 1, 0, 1, 1);
 
-        lineEdit->raise();
-        lineEdit_2->raise();
-        lineEdit_3->raise();
-        lineEdit_4->raise();
-        label->raise();
-        label_2->raise();
-        label_3->raise();
-        label_4->raise();
-        label_5->raise();
-        lineEdit_4->raise();
-        comboBox->raise();
-        label_6->raise();
-        pushButton->raise();
-        pushButton_2->raise();
 
         retranslateUi(addProduct);
 
@@ -200,8 +187,8 @@ public:
         label_4->setText(QApplication::translate("addProduct", "\320\235\320\224\320\241", 0, QApplication::UnicodeUTF8));
         label_5->setText(QApplication::translate("addProduct", "%", 0, QApplication::UnicodeUTF8));
         label_6->setText(QApplication::translate("addProduct", "\320\223\321\200\321\203\320\277\320\277\320\260", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("addProduct", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setText(QApplication::translate("addProduct", "\320\222\321\213\321\205\320\276\320\264", 0, QApplication::UnicodeUTF8));
+        addProductAdd->setText(QApplication::translate("addProduct", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
+        addProductExit->setText(QApplication::translate("addProduct", "\320\222\321\213\321\205\320\276\320\264", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

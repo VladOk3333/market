@@ -26,7 +26,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBox_3"/>
+        <widget class="QComboBox" name="skladWindowGroups"/>
        </item>
       </layout>
      </item>
@@ -71,7 +71,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="skladWindowSearch">
        <property name="text">
         <string>Поиск</string>
        </property>
@@ -80,7 +80,7 @@
     </layout>
    </item>
    <item>
-    <widget class="QTableWidget" name="tableWidget"/>
+    <widget class="QTableWidget" name="skladWindowList"/>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_9">
@@ -127,7 +127,7 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_12">
      <item>
-      <widget class="QCheckBox" name="checkBox_3">
+      <widget class="QCheckBox" name="skladWindowAll">
        <property name="text">
         <string>Все товары</string>
        </property>
@@ -147,7 +147,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="skladWindowExit">
        <property name="text">
         <string>OK</string>
        </property>

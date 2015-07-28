@@ -20,8 +20,8 @@
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
+#include <QtGui/QListWidget>
 #include <QtGui/QPushButton>
-#include <QtGui/QTableWidget>
 #include <QtGui/QToolButton>
 #include <QtGui/QVBoxLayout>
 
@@ -34,18 +34,18 @@ public:
     QLabel *label_4;
     QLabel *label_5;
     QHBoxLayout *horizontalLayout_2;
-    QComboBox *comboBox;
+    QComboBox *spravTovarGroups;
     QToolButton *addingGroup;
     QLineEdit *lineEdit;
     QLabel *label_3;
     QVBoxLayout *verticalLayout;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *addingGroupAdd;
-    QPushButton *pushButton_4;
-    QPushButton *pushButton_5;
-    QPushButton *pushButton_6;
-    QTableWidget *tableWidget;
+    QPushButton *spravTovarSearch;
+    QPushButton *spravTovarChange;
+    QPushButton *spravTovarAdd;
+    QPushButton *spravTovarCopy;
+    QPushButton *spravTovarDelete;
+    QPushButton *spravTovarExit;
+    QListWidget *spravTovarList;
     QHBoxLayout *horizontalLayout;
     QLabel *label_2;
     QLabel *label;
@@ -72,11 +72,11 @@ public:
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        comboBox = new QComboBox(spravTovar);
-        comboBox->setObjectName(QString::fromUtf8("comboBox"));
-        comboBox->setMinimumSize(QSize(150, 0));
+        spravTovarGroups = new QComboBox(spravTovar);
+        spravTovarGroups->setObjectName(QString::fromUtf8("spravTovarGroups"));
+        spravTovarGroups->setMinimumSize(QSize(150, 0));
 
-        horizontalLayout_2->addWidget(comboBox);
+        horizontalLayout_2->addWidget(spravTovarGroups);
 
         addingGroup = new QToolButton(spravTovar);
         addingGroup->setObjectName(QString::fromUtf8("addingGroup"));
@@ -99,43 +99,43 @@ public:
         verticalLayout = new QVBoxLayout();
         verticalLayout->setSpacing(6);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        pushButton = new QPushButton(spravTovar);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        spravTovarSearch = new QPushButton(spravTovar);
+        spravTovarSearch->setObjectName(QString::fromUtf8("spravTovarSearch"));
 
-        verticalLayout->addWidget(pushButton);
+        verticalLayout->addWidget(spravTovarSearch);
 
-        pushButton_2 = new QPushButton(spravTovar);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        spravTovarChange = new QPushButton(spravTovar);
+        spravTovarChange->setObjectName(QString::fromUtf8("spravTovarChange"));
 
-        verticalLayout->addWidget(pushButton_2);
+        verticalLayout->addWidget(spravTovarChange);
 
-        addingGroupAdd = new QPushButton(spravTovar);
-        addingGroupAdd->setObjectName(QString::fromUtf8("addingGroupAdd"));
+        spravTovarAdd = new QPushButton(spravTovar);
+        spravTovarAdd->setObjectName(QString::fromUtf8("spravTovarAdd"));
 
-        verticalLayout->addWidget(addingGroupAdd);
+        verticalLayout->addWidget(spravTovarAdd);
 
-        pushButton_4 = new QPushButton(spravTovar);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        spravTovarCopy = new QPushButton(spravTovar);
+        spravTovarCopy->setObjectName(QString::fromUtf8("spravTovarCopy"));
 
-        verticalLayout->addWidget(pushButton_4);
+        verticalLayout->addWidget(spravTovarCopy);
 
-        pushButton_5 = new QPushButton(spravTovar);
-        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
+        spravTovarDelete = new QPushButton(spravTovar);
+        spravTovarDelete->setObjectName(QString::fromUtf8("spravTovarDelete"));
 
-        verticalLayout->addWidget(pushButton_5);
+        verticalLayout->addWidget(spravTovarDelete);
 
-        pushButton_6 = new QPushButton(spravTovar);
-        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
+        spravTovarExit = new QPushButton(spravTovar);
+        spravTovarExit->setObjectName(QString::fromUtf8("spravTovarExit"));
 
-        verticalLayout->addWidget(pushButton_6);
+        verticalLayout->addWidget(spravTovarExit);
 
 
         gridLayout->addLayout(verticalLayout, 2, 2, 2, 1);
 
-        tableWidget = new QTableWidget(spravTovar);
-        tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
+        spravTovarList = new QListWidget(spravTovar);
+        spravTovarList->setObjectName(QString::fromUtf8("spravTovarList"));
 
-        gridLayout->addWidget(tableWidget, 3, 0, 1, 2);
+        gridLayout->addWidget(spravTovarList, 3, 0, 1, 2);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
@@ -166,12 +166,12 @@ public:
         label_5->setText(QApplication::translate("spravTovar", "\320\244\320\270\320\273\321\214\321\202\321\200", 0, QApplication::UnicodeUTF8));
         addingGroup->setText(QApplication::translate("spravTovar", "...", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("spravTovar", "\320\235\320\260\320\270\320\274\320\265\320\275\320\276\320\262\320\260\320\275\320\270\320\265", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("spravTovar", "\320\237\320\276\320\270\321\201\320\272", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setText(QApplication::translate("spravTovar", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
-        addingGroupAdd->setText(QApplication::translate("spravTovar", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
-        pushButton_4->setText(QApplication::translate("spravTovar", "\320\232\320\276\320\277\320\270\321\217", 0, QApplication::UnicodeUTF8));
-        pushButton_5->setText(QApplication::translate("spravTovar", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
-        pushButton_6->setText(QApplication::translate("spravTovar", "\320\236\320\232", 0, QApplication::UnicodeUTF8));
+        spravTovarSearch->setText(QApplication::translate("spravTovar", "\320\237\320\276\320\270\321\201\320\272", 0, QApplication::UnicodeUTF8));
+        spravTovarChange->setText(QApplication::translate("spravTovar", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
+        spravTovarAdd->setText(QApplication::translate("spravTovar", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
+        spravTovarCopy->setText(QApplication::translate("spravTovar", "\320\232\320\276\320\277\320\270\321\217", 0, QApplication::UnicodeUTF8));
+        spravTovarDelete->setText(QApplication::translate("spravTovar", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
+        spravTovarExit->setText(QApplication::translate("spravTovar", "\320\236\320\232", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("spravTovar", "\320\235\320\260\320\267\320\262\320\260\320\275\320\270\320\265", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("spravTovar", "\320\235\320\276\320\274\320\265\321\200", 0, QApplication::UnicodeUTF8));
     } // retranslateUi

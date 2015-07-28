@@ -17,10 +17,13 @@ public:
 	sortGroup(FunctionsGroup &object, QWidget *parent = 0);
 	~sortGroup();
 	FunctionsGroup *localObj;
+	signals:
+	void update();
 public slots:
 	void showListGroups();
 	void getDownItem();
 	void getUpItem();
+	void ExitWindow();
 
 private:
 	Ui::sortGroup ui;

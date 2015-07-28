@@ -31,7 +31,7 @@
    <item row="1" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="spravTovarGroups">
        <property name="minimumSize">
         <size>
          <width>150</width>
@@ -62,42 +62,42 @@
    <item row="2" column="2" rowspan="2">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="spravTovarSearch">
        <property name="text">
         <string>Поиск</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="spravTovarChange">
        <property name="text">
         <string>Изменить</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="addingGroupAdd">
+      <widget class="QPushButton" name="spravTovarAdd">
        <property name="text">
         <string>Добавить</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="spravTovarCopy">
        <property name="text">
         <string>Копия</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="spravTovarDelete">
        <property name="text">
         <string>Удалить</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="spravTovarExit">
        <property name="text">
         <string>ОК</string>
        </property>
@@ -106,7 +106,7 @@
     </layout>
    </item>
    <item row="3" column="0" colspan="2">
-    <widget class="QTableWidget" name="tableWidget"/>
+    <widget class="QListWidget" name="spravTovarList"/>
    </item>
    <item row="4" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout">

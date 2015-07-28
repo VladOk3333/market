@@ -14,6 +14,8 @@ public:
 
 private:
 	Ui::skladWindow ui;
+	private slots:
+		void skladWindowExit();
 };
 
 #endif // SKLADWINDOW_H

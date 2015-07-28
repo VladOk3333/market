@@ -14,7 +14,6 @@ public:
 	Company(QWidget *parent = 0);
 	~Company();
 	bool dataChange;
-
 private:
 	Ui::Company ui;
 private slots:

@@ -7,8 +7,9 @@ sortGroup::sortGroup(FunctionsGroup &object, QWidget *parent)
 	ui.setupUi(this);
 	localObj = &object;
 	showListGroups();
-//	int aaa = connect(window1, SIGNAL(update()), this, SLOT(updateTable()));
 	connect(ui.sortGroupUp, SIGNAL(clicked()),this,SLOT(getUpItem()));
+	connect(ui.sortGroupDown, SIGNAL(clicked()),this,SLOT(getDownItem()));
+	connect(ui.sortGroupExit, SIGNAL(clicked()),this,SLOT(ExitWindow()));
 }
 
 sortGroup::~sortGroup()
@@ -26,10 +27,6 @@ void sortGroup::showListGroups()
 		localObj->currentNote=ui.sortGroupList->count();
 		localObj->currentNote--;
 		ui.sortGroupList->setCurrentRow(localObj->currentNote);
-		
-		/*tmpItem=new QListWidgetItem (record_in_browser(rec));
-		ui.listGroups->insertItem(row,tmpItem);
-		ui.listGroups->item(row)->setData(Qt::UserRole, rec.id);*/
 	}
 }
 void sortGroup::getUpItem()
@@ -40,17 +37,9 @@ void sortGroup::getUpItem()
 	temp.name=localObj->groups.value(row-1).name;
 	if(row-1>=0)
 	{
-		/*localObj->groups.replace(localObj->currentNote-1, localObj->groups[localObj->currentNote]);
-		localObj->groups.replace(localObj->currentNote, temp);
-		localObj->currentNote=localObj->currentNote-1;*/
-
 		localObj->groups.replace(row-1, localObj->groups[row]);
 		localObj->groups.replace(row, temp);
-
-		
 		int lol=localObj->currentNote;
-		
-		
 		ui.sortGroupList->clear();
 		showListGroups();
 		localObj->currentNote=row-1;
@@ -61,5 +50,27 @@ void sortGroup::getUpItem()
 
 void sortGroup::getDownItem()
 {
+	Groups temp;
+	int row = ui.sortGroupList->currentRow();
+	temp.name=localObj->groups.value(row+1).name;
+	if(row!=localObj->currentNote)
+	{
+		localObj->groups.replace(row+1, localObj->groups[row]);
+		localObj->groups.replace(row, temp);
 
+		int lol=localObj->currentNote;
+		
+		
+		ui.sortGroupList->clear();
+		showListGroups();
+		localObj->currentNote=row+1;
+		ui.sortGroupList->setCurrentRow(localObj->currentNote);
+	}
+	
+}
+
+void sortGroup::ExitWindow()
+{
+	emit update();
+	this->close();
 }
