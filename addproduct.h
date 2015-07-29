@@ -12,6 +12,7 @@ class addProduct : public QDialog
 
 public:
 	addProduct(FunctionsProducts &obj, FunctionsGroup &object, QWidget *parent = 0);
+	addProduct::addProduct(FunctionsProducts &obj, FunctionsGroup &object,QWidget *parent,QString tempTitle, QString tempCountry,QString tempIzm,float tempNDS,int tempGroups);
 	~addProduct();
 	FunctionsGroup *localObj;
 	FunctionsProducts *localObj1;

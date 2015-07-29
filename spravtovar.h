@@ -20,6 +20,7 @@ private:
 	FunctionsGroup *obj;
 	FunctionsProducts *obj1;
 	addProduct *window;
+	addProduct *window1;
 
 private slots:
 	void addGroupClicked();
@@ -27,6 +28,8 @@ private slots:
 	void addProductClicked();
 	void showListProd();
 	void updateTable();
+	void deleteTov();
+	void addProdIzm();
 };
 
 #endif // SPRAVTOVAR_H

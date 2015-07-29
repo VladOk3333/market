@@ -42,3 +42,16 @@ void addProduct::ProdExit()
 {
 	this->close();
 }
+
+addProduct::addProduct(FunctionsProducts &obj, FunctionsGroup &object,QWidget *parent,QString tempTitle, QString tempCountry,QString tempIzm,float tempNDS,int tempGroups)
+	: QDialog(parent)
+{
+	ui.setupUi(this);
+	ui.addProductName->setText(tempTitle);
+	ui.addProductCountry->setText(tempCountry);
+	ui.addProductIzm->setText(tempIzm);
+	ui.addProductNDS->setValue(tempNDS);
+	ui.addProductGroup->addItem(object.groups[tempGroups].name);
+	//connect(ui.addProductAdd, SIGNAL(clicked()), this, SLOT(addProductAdd()));
+	//connect(ui.addProductExit, SIGNAL(clicked()), this, SLOT(ProdExit()));
+}
