@@ -6,6 +6,8 @@
 #include "creategroup.h"
 #include "FunctionsGroup.h"
 #include "FunctionsProducts.h"
+#include "FunctionsPeople.h"
+#include "addpeople.h"
 #include <qlistwidget.h>
 #include "sortgroup.h"
 
@@ -15,15 +17,17 @@ class addGroup : public QDialog
 
 public:
 	addGroup(FunctionsGroup &obj, QWidget *parent = 0);
-	addGroup::addGroup(QWidget *parent=0);
+	addGroup::addGroup(FunctionsPeople &peopleObj,QWidget *parent=0);
 	~addGroup();
 	createGroup *window;
 	sortGroup *window1;
 	createGroup *window2;
+	addPeople *window3;
 private:
 	Ui::addGroup ui;
 
 	FunctionsGroup *localObj;
+	FunctionsPeople *peopleObj1;
 
 	private slots:
 		void addGroupAdd();
@@ -33,6 +37,9 @@ private:
 		void deleteGroup();
 		void addGroupIzm();
 		void addGroupExit();
+		void addClientAdd();
+		void showListPeople();
+		void addPeopleExit();
 };
 
 #endif // ADDGROUP_H

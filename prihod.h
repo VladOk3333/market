@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "ui_prihod.h"
+#include "addviruchka.h"
 
 class Prihod : public QDialog
 {
@@ -11,12 +12,14 @@ class Prihod : public QDialog
 public:
 	Prihod(QWidget *parent = 0);
 	~Prihod();
+	addViruchka *window;
 
 private:
 	Ui::Prihod ui;
 
 	private slots:
 		void prihodExit();
+		void addViruchkaAdd();
 };
 
 #endif // PRIHOD_H

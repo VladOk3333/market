@@ -7,6 +7,8 @@ addGroup::addGroup(FunctionsGroup &object, QWidget *parent)
 	localObj = &object;
 	window = new createGroup(*localObj, this);
 	window2 = new createGroup(*localObj, this);
+	
+
 	connect(ui.addingGroupAdd, SIGNAL(clicked(bool)), this, SLOT(addGroupAdd()));
 	connect(ui.addGroupSort, SIGNAL(clicked(bool)), this, SLOT(addGroupSort()));
 	connect(ui.addGroupDel, SIGNAL(clicked(bool)), this, SLOT(deleteGroup()));
@@ -98,8 +100,47 @@ void addGroup::addGroupExit()
 
 
 //clients
-addGroup::addGroup(QWidget *parent)
+addGroup::addGroup(FunctionsPeople &peopleObj,QWidget *parent)
 	: QDialog(parent)
 {
+	
 	ui.setupUi(this);
+	peopleObj1=&peopleObj;
+	connect(ui.addingGroupAdd, SIGNAL(clicked(bool)), this, SLOT(addClientAdd()));
+	connect(ui.addGroupExit, SIGNAL(clicked(bool)), this, SLOT(addPeopleExit()));
+	window3 = new addPeople(*peopleObj1,this);
+
+	showListPeople();
+}
+void addGroup::addClientAdd()
+{
+	window3->show();
+	
+}
+void addGroup::showListPeople()
+{
+	int size =peopleObj1->peoples.size();
+	for(int i=0; i!=peopleObj1->peoples.size();i++)
+	{
+		QListWidgetItem* tmpItem = new QListWidgetItem;
+		tmpItem->setText(peopleObj1->peoples[i].peopleName);
+		ui.listGroups->insertItem(i,tmpItem);
+
+		peopleObj1->currentNote=ui.listGroups->count();
+		peopleObj1->currentNote--;
+		ui.listGroups->setCurrentRow(peopleObj1->currentNote);
+	}
+}
+/*void addGroup::updateTablePeople() {
+	ui.listGroups->clear();
+	showListPeople();
+
+}*/
+
+
+//void addGroup::showListPeople2(){}
+void addGroup::addPeopleExit()
+{
+	peopleObj1->SavePeopleFile("people.mkt");
+	this->close();
 }

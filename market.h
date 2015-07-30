@@ -13,6 +13,7 @@
 #include "FunctionsGroup.h"
 #include "FunctionsProducts.h"
 #include "company.h"
+#include "FunctionsPeople.h"
 class market : public QMainWindow
 {
 	Q_OBJECT
@@ -22,6 +23,7 @@ public:
 	~market();
 	FunctionsGroup object;
 	FunctionsProducts object1;
+	FunctionsPeople peopleObj;
 
 
 private slots:
@@ -32,6 +34,7 @@ private slots:
 	void productsClicked();
 	void rekvizitClicked();
 	void clientsClicked();
+	void viruchkaClicked();
 
 private:
 	Ui::marketClass ui;

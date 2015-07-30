@@ -19,6 +19,7 @@ private:
 	Ui::spravTovar ui;
 	FunctionsGroup *obj;
 	FunctionsProducts *obj1;
+
 	addProduct *window;
 	addProduct *window1;
 

@@ -26,6 +26,7 @@ void Company::dataSave()
 	}
 }
 
+
 bool Company::SaveInFile(QString filename) 
 {
 	QFile file(filename);
@@ -56,6 +57,7 @@ bool Company::SaveInFile(QString filename)
 		tmp<<ui.contact->text();
 		tmp<<ui.DLC->text();
 		return true;
+		
 	}
 	return false;
 }

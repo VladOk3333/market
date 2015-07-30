@@ -57,8 +57,6 @@ public:
     QMenu *menu_3;
     QMenu *menu_4;
     QMenu *menu_5;
-    QMenu *menu_6;
-    QMenu *menu_7;
     QMenu *exitApp;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -121,7 +119,7 @@ public:
         marketClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(marketClass);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 864, 26));
+        menuBar->setGeometry(QRect(0, 0, 864, 21));
         menu = new QMenu(menuBar);
         menu->setObjectName(QString::fromUtf8("menu"));
         menu_2 = new QMenu(menuBar);
@@ -132,10 +130,6 @@ public:
         menu_4->setObjectName(QString::fromUtf8("menu_4"));
         menu_5 = new QMenu(menuBar);
         menu_5->setObjectName(QString::fromUtf8("menu_5"));
-        menu_6 = new QMenu(menuBar);
-        menu_6->setObjectName(QString::fromUtf8("menu_6"));
-        menu_7 = new QMenu(menuBar);
-        menu_7->setObjectName(QString::fromUtf8("menu_7"));
         exitApp = new QMenu(menuBar);
         exitApp->setObjectName(QString::fromUtf8("exitApp"));
         marketClass->setMenuBar(menuBar);
@@ -151,8 +145,6 @@ public:
         menuBar->addAction(menu_3->menuAction());
         menuBar->addAction(menu_4->menuAction());
         menuBar->addAction(menu_5->menuAction());
-        menuBar->addAction(menu_6->menuAction());
-        menuBar->addAction(menu_7->menuAction());
         menuBar->addAction(exitApp->menuAction());
         menu->addAction(sostoyanie);
         menu->addSeparator();
@@ -166,7 +158,6 @@ public:
         menu_3->addAction(rashod_kassa);
         menu_4->addAction(system_settings);
         menu_4->addAction(workplace_settings);
-        menu_4->addAction(print_settings);
         menu_4->addSeparator();
         menu_4->addAction(rekvizit);
         menu_4->addAction(kurs);
@@ -176,14 +167,6 @@ public:
         menu_5->addAction(spravochnik_postavshik);
         menu_5->addSeparator();
         menu_5->addAction(spravochnik_rashod);
-        menu_6->addAction(print_naklad);
-        menu_6->addAction(print_chek);
-        menu_6->addSeparator();
-        menu_6->addAction(cennik);
-        menu_7->addAction(instruction);
-        menu_7->addAction(about);
-        menu_7->addSeparator();
-        menu_7->addAction(filtr);
 
         retranslateUi(marketClass);
 
@@ -222,8 +205,6 @@ public:
         menu_3->setTitle(QApplication::translate("marketClass", "\320\224\320\265\320\275\321\214\320\263\320\270", 0, QApplication::UnicodeUTF8));
         menu_4->setTitle(QApplication::translate("marketClass", "\320\235\320\260\321\201\321\202\321\200\320\276\320\271\320\272\320\270", 0, QApplication::UnicodeUTF8));
         menu_5->setTitle(QApplication::translate("marketClass", "\320\241\320\277\321\200\320\260\320\262\320\276\321\207\320\275\320\270\320\272\320\270", 0, QApplication::UnicodeUTF8));
-        menu_6->setTitle(QApplication::translate("marketClass", "\320\237\320\265\321\207\320\260\321\202\321\214", 0, QApplication::UnicodeUTF8));
-        menu_7->setTitle(QApplication::translate("marketClass", "\320\241\320\265\321\200\320\262\320\270\321\201", 0, QApplication::UnicodeUTF8));
         exitApp->setTitle(QApplication::translate("marketClass", "\320\222\321\213\321\205\320\276\320\264", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 

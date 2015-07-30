@@ -61,7 +61,7 @@ addProduct::addProduct(FunctionsProducts &obj, FunctionsGroup &object,QWidget *p
 	ui.addProductGroup->setCurrentIndex(tempGroups);
 	index=id;
 	connect(ui.addProductAdd, SIGNAL(clicked()), this, SLOT(editionList()));
-	//connect(ui.addProductExit, SIGNAL(clicked()), this, SLOT(ProdExit()));
+	connect(ui.addProductExit, SIGNAL(clicked()), this, SLOT(ProdExit()));
 
 }
 

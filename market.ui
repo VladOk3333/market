@@ -20,7 +20,7 @@
      <x>0</x>
      <y>0</y>
      <width>864</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -54,7 +54,6 @@
     </property>
     <addaction name="system_settings"/>
     <addaction name="workplace_settings"/>
-    <addaction name="print_settings"/>
     <addaction name="separator"/>
     <addaction name="rekvizit"/>
     <addaction name="kurs"/>
@@ -70,24 +69,6 @@
     <addaction name="separator"/>
     <addaction name="spravochnik_rashod"/>
    </widget>
-   <widget class="QMenu" name="menu_6">
-    <property name="title">
-     <string>Печать</string>
-    </property>
-    <addaction name="print_naklad"/>
-    <addaction name="print_chek"/>
-    <addaction name="separator"/>
-    <addaction name="cennik"/>
-   </widget>
-   <widget class="QMenu" name="menu_7">
-    <property name="title">
-     <string>Сервис</string>
-    </property>
-    <addaction name="instruction"/>
-    <addaction name="about"/>
-    <addaction name="separator"/>
-    <addaction name="filtr"/>
-   </widget>
    <widget class="QMenu" name="exitApp">
     <property name="title">
      <string>Выход</string>
@@ -98,8 +79,6 @@
    <addaction name="menu_3"/>
    <addaction name="menu_4"/>
    <addaction name="menu_5"/>
-   <addaction name="menu_6"/>
-   <addaction name="menu_7"/>
    <addaction name="exitApp"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">

@@ -23,11 +23,11 @@ void sortGroup::showListGroups()
 		QListWidgetItem* tmpItem = new QListWidgetItem;
 		tmpItem->setText(localObj->groups[i].name);
 		ui.sortGroupList->insertItem(i,tmpItem);
-		
+	}
 		localObj->currentNote=ui.sortGroupList->count();
 		localObj->currentNote--;
 		ui.sortGroupList->setCurrentRow(localObj->currentNote);
-	}
+	
 }
 void sortGroup::getUpItem()
 {
@@ -53,7 +53,7 @@ void sortGroup::getDownItem()
 	Groups temp;
 	int row = ui.sortGroupList->currentRow();
 	temp.name=localObj->groups.value(row+1).name;
-	if(row!=localObj->currentNote)
+	if(row!=localObj->currentNote || localObj->currentNote==0 )
 	{
 		localObj->groups.replace(row+1, localObj->groups[row]);
 		localObj->groups.replace(row, temp);
