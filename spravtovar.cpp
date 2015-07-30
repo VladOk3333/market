@@ -13,7 +13,10 @@ spravTovar::spravTovar(FunctionsProducts &object2, FunctionsGroup &object, QWidg
 
 	obj = &object;
 	obj1=&object2;
+	//obj1->LoadProdFile("products.mkt");
+	//obj->LoadGroupFile("groups.mkt");
 	showListProd();
+	
 }
 
 spravTovar::~spravTovar()
@@ -35,6 +38,7 @@ void spravTovar::addProductClicked()
 }
 void spravTovar::spravTovarExit()
 {
+	obj1->SaveProdFile("products.mkt");
 	this->close();
 }
 void spravTovar::showListProd()
@@ -92,6 +96,9 @@ void spravTovar::addProdIzm()
 	/*if(obj1->prod.size()) window1 = new addProduct(obj1->prod[ui.spravTovarList->currentRow()].title,ui.spravTovarList->currentRow(),*obj, this);
 	int upd = connect(window1, SIGNAL(update()), this, SLOT(updateTable()));
 	window1->show();*/
-	if(obj1->prod.size())window1 = new addProduct(*obj1,*obj,this, obj1->prod[ui.spravTovarList->currentRow()].title, obj1->prod[ui.spravTovarList->currentRow()].country,obj1->prod[ui.spravTovarList->currentRow()].izmer, obj1->prod[ui.spravTovarList->currentRow()].NDS, obj1->prod[ui.spravTovarList->currentRow()].group);
+	int h=ui.spravTovarList->currentRow();
+	QString k=obj1->prod[ui.spravTovarList->currentRow()].title;
+	if(obj1->prod.size())
+		window1 = new addProduct(*obj1,*obj,this, obj1->prod[ui.spravTovarList->currentRow()].title, obj1->prod[ui.spravTovarList->currentRow()].country,obj1->prod[ui.spravTovarList->currentRow()].izmer, obj1->prod[ui.spravTovarList->currentRow()].NDS, obj1->prod[ui.spravTovarList->currentRow()].group, ui.spravTovarList->currentRow());
 	window1->show();
 }

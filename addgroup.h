@@ -15,6 +15,7 @@ class addGroup : public QDialog
 
 public:
 	addGroup(FunctionsGroup &obj, QWidget *parent = 0);
+	addGroup::addGroup(QWidget *parent=0);
 	~addGroup();
 	createGroup *window;
 	sortGroup *window1;

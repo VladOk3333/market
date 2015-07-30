@@ -23,6 +23,7 @@ public:
 	FunctionsGroup object;
 	FunctionsProducts object1;
 
+
 private slots:
 	void sostoyanieClicked();
 	void prihodClicked();
@@ -30,6 +31,7 @@ private slots:
 	void closeApp();
 	void productsClicked();
 	void rekvizitClicked();
+	void clientsClicked();
 
 private:
 	Ui::marketClass ui;

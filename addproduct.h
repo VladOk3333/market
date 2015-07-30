@@ -12,10 +12,16 @@ class addProduct : public QDialog
 
 public:
 	addProduct(FunctionsProducts &obj, FunctionsGroup &object, QWidget *parent = 0);
-	addProduct::addProduct(FunctionsProducts &obj, FunctionsGroup &object,QWidget *parent,QString tempTitle, QString tempCountry,QString tempIzm,float tempNDS,int tempGroups);
+	addProduct::addProduct(FunctionsProducts &obj, FunctionsGroup &object,QWidget *parent,QString tempTitle, QString tempCountry,QString tempIzm,float tempNDS,int tempGroups, int id);
 	~addProduct();
 	FunctionsGroup *localObj;
 	FunctionsProducts *localObj1;
+	QString title;
+	QString country;
+	QString izm;
+	float NDS;
+	int groups;
+	int index;
 
 signals:
 	void update();
@@ -26,6 +32,9 @@ private:
 private slots:
 	void addProductAdd();
 	void ProdExit();
+	void editProduct(int);
+	void editionList();
+
 };
 
 #endif // ADDPRODUCT_H

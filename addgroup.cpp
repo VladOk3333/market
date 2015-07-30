@@ -95,3 +95,11 @@ void addGroup::addGroupExit()
 	localObj->SaveGroupFile("groups.mkt");
 	this->close();
 }
+
+
+//clients
+addGroup::addGroup(QWidget *parent)
+	: QDialog(parent)
+{
+	ui.setupUi(this);
+}

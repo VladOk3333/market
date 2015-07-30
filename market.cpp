@@ -12,6 +12,10 @@ market::market(QWidget *parent, Qt::WFlags flags)
 	connect(ui.exitApp, SIGNAL(	aboutToShow ()), this, SLOT(closeApp()));
 	connect(ui.spravochnik_tovar, SIGNAL(triggered(bool)), this, SLOT(productsClicked()));
 	connect(ui.rekvizit, SIGNAL(triggered(bool)), this, SLOT(rekvizitClicked()));
+	connect(ui.spravochnik_client, SIGNAL(triggered(bool)), this, SLOT(clientsClicked()));
+
+	object.LoadGroupFile("groups.mkt");
+	object1.LoadProdFile("products.mkt");
 
 }
 
@@ -47,6 +51,14 @@ void market::productsClicked()
 {
 	
 	spravTovar *window = new spravTovar(object1, object, this);
+	
+	window->show();
+}
+void market::clientsClicked()
+{
+	
+	addGroup *window = new addGroup(this);
+	
 	window->show();
 }
 
