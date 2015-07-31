@@ -15,7 +15,7 @@ addGroup::addGroup(FunctionsGroup &object, QWidget *parent)
 	connect(ui.addGroupExit, SIGNAL(clicked(bool)), this, SLOT(addGroupExit()));
 	connect(ui.addGroupChange, SIGNAL(clicked(bool)), this, SLOT(addGroupIzm()));
 	int ggg = connect(window, SIGNAL(update()), this, SLOT(updateTable()));
-	localObj->LoadGroupFile("groups.mkt");
+	//localObj->LoadGroupFile("groups.mkt");
 	localObj->groups;
 	ui.listGroups->clear();
 	showListGroups();

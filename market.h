@@ -24,11 +24,12 @@ public:
 	FunctionsGroup object;
 	FunctionsProducts object1;
 	FunctionsPeople peopleObj;
+	FunctionsViruchka virObj;
 
 
 private slots:
 	void sostoyanieClicked();
-	void prihodClicked();
+	//void prihodClicked();
 	void vozvratPostavshikClicked();
 	void closeApp();
 	void productsClicked();

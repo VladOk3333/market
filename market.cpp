@@ -37,12 +37,12 @@ void market::sostoyanieClicked()
 	window.setWindowFlags(Qt::WindowCloseButtonHint);
 	window.exec();
 }
-void market::prihodClicked()
+/*void market::prihodClicked()
 {
 	Prihod window;
 	window.setWindowFlags(Qt::WindowCloseButtonHint);
 	window.exec();
-}
+}*/
 
 void market::vozvratPostavshikClicked()
 {
@@ -65,7 +65,7 @@ void market::clientsClicked()
 void market::viruchkaClicked()
 {
 	
-	Prihod *window = new Prihod(this);
+	Prihod *window = new Prihod(virObj,this);
 	
 	window->show();
 }

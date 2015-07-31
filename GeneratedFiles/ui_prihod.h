@@ -117,6 +117,9 @@ public:
 
         prihodList = new QTableWidget(Prihod);
         prihodList->setObjectName(QString::fromUtf8("prihodList"));
+        prihodList->setGridStyle(Qt::SolidLine);
+        prihodList->horizontalHeader()->setVisible(false);
+        prihodList->verticalHeader()->setVisible(false);
 
         verticalLayout_2->addWidget(prihodList);
 

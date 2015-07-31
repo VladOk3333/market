@@ -90,6 +90,7 @@
     <ClCompile Include="FunctionsGroup.cpp" />
     <ClCompile Include="FunctionsPeople.cpp" />
     <ClCompile Include="FunctionsProducts.cpp" />
+    <ClCompile Include="FunctionsViruchka.cpp" />
     <ClCompile Include="GeneratedFiles\Debug\moc_addgroup.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -235,6 +236,7 @@
     <ClCompile Include="spravtovar.cpp" />
     <ClCompile Include="systemsettings.cpp" />
     <ClCompile Include="titlesettings.cpp" />
+    <ClCompile Include="viruchka.cpp" />
     <ClCompile Include="vozvratpostavshik.cpp" />
     <ClCompile Include="workplacesettings.cpp" />
   </ItemGroup>
@@ -264,6 +266,8 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FunctionsViruchka.h" />
+    <ClInclude Include="viruchka.h" />
     <CustomBuild Include="company.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing company.h...</Message>
