@@ -10,6 +10,8 @@ spravTovar::spravTovar(FunctionsProducts &object2, FunctionsGroup &object, QWidg
 	connect(ui.spravTovarAdd, SIGNAL(clicked(bool)), this, SLOT(addProductClicked()));
 	connect(ui.spravTovarDelete, SIGNAL(clicked(bool)), this, SLOT(deleteTov()));
 	connect(ui.spravTovarChange, SIGNAL(clicked(bool)), this, SLOT(addProdIzm()));
+	connect(ui.spravTovarList, SIGNAL(itemSelectionChanged()), this, SLOT(changeList()));
+	//itemSelectionChanged ()
 
 	obj = &object;
 	obj1=&object2;
@@ -54,6 +56,13 @@ void spravTovar::showListProd()
 		obj1->currentNoteProd--;
 		ui.spravTovarList->setCurrentRow(obj1->currentNoteProd);
 	}
+	
+}
+
+void spravTovar::changeList()
+{
+	ui.productLabelName->setText(obj1->prod[ui.spravTovarList->currentRow()].title);
+	ui.productLabelNum->setText(QString::number(ui.spravTovarList->currentRow()+1)+"/"+QString::number(obj1->prod.size()));
 }
 
 void spravTovar::updateTable() {

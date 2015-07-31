@@ -15,8 +15,12 @@ public:
 	~addViruchka();
 	FunctionsViruchka *localObj;
 
+signals:
+	void update();
+
 private:
 	Ui::addViruchka ui;
+
 private slots:
 	void addingViruchkaAdd();
 };

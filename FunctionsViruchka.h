@@ -11,8 +11,10 @@ public:
 	~FunctionsViruchka(void);
 
 	QVector<viruchka> vir;
+	int currentNote;
 
 	void addVir(viruchka &temp);
 	bool SaveViruchkaFile(QString filename);
+	bool LoadViruchkaFile(QString filename);
 };
 

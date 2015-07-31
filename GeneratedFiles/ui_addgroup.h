@@ -30,7 +30,6 @@ class Ui_addGroup
 public:
     QGridLayout *gridLayout;
     QVBoxLayout *verticalLayout;
-    QPushButton *addGroupsFind;
     QPushButton *addingGroupAdd;
     QPushButton *addGroupChange;
     QPushButton *addGroupDel;
@@ -39,7 +38,7 @@ public:
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QLabel *label;
-    QLabel *label_2;
+    QLabel *addGroupCount;
     QListWidget *listGroups;
 
     void setupUi(QDialog *addGroup)
@@ -54,11 +53,6 @@ public:
         verticalLayout = new QVBoxLayout();
         verticalLayout->setSpacing(6);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        addGroupsFind = new QPushButton(addGroup);
-        addGroupsFind->setObjectName(QString::fromUtf8("addGroupsFind"));
-
-        verticalLayout->addWidget(addGroupsFind);
-
         addingGroupAdd = new QPushButton(addGroup);
         addingGroupAdd->setObjectName(QString::fromUtf8("addingGroupAdd"));
 
@@ -99,10 +93,10 @@ public:
 
         horizontalLayout->addWidget(label);
 
-        label_2 = new QLabel(addGroup);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
+        addGroupCount = new QLabel(addGroup);
+        addGroupCount->setObjectName(QString::fromUtf8("addGroupCount"));
 
-        horizontalLayout->addWidget(label_2);
+        horizontalLayout->addWidget(addGroupCount);
 
 
         gridLayout->addLayout(horizontalLayout, 1, 0, 1, 1);
@@ -121,14 +115,13 @@ public:
     void retranslateUi(QDialog *addGroup)
     {
         addGroup->setWindowTitle(QApplication::translate("addGroup", "addGroup", 0, QApplication::UnicodeUTF8));
-        addGroupsFind->setText(QApplication::translate("addGroup", "\320\237\320\276\320\270\321\201\320\272", 0, QApplication::UnicodeUTF8));
         addingGroupAdd->setText(QApplication::translate("addGroup", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
         addGroupChange->setText(QApplication::translate("addGroup", "\320\230\320\267\320\274\320\265\320\275\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
         addGroupDel->setText(QApplication::translate("addGroup", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214", 0, QApplication::UnicodeUTF8));
         addGroupSort->setText(QApplication::translate("addGroup", "\320\237\320\276\321\200\321\217\320\264\320\276\320\272", 0, QApplication::UnicodeUTF8));
         addGroupExit->setText(QApplication::translate("addGroup", "\320\222\321\213\321\205\320\276\320\264", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("addGroup", "\320\222\321\201\320\265\320\263\320\276", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("addGroup", "\320\272\320\276\320\273\320\270\321\207\320\265\321\201\321\202\320\262\320\276", 0, QApplication::UnicodeUTF8));
+        addGroupCount->setText(QApplication::translate("addGroup", "\320\272\320\276\320\273\320\270\321\207\320\265\321\201\321\202\320\262\320\276", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

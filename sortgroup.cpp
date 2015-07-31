@@ -34,9 +34,9 @@ void sortGroup::getUpItem()
 	
 	Groups temp;
 	int row = ui.sortGroupList->currentRow();
-	temp.name=localObj->groups.value(row-1).name;
-	if(row-1>=0)
+		if(row-1>=0)
 	{
+		temp.name=localObj->groups.value(row-1).name;
 		localObj->groups.replace(row-1, localObj->groups[row]);
 		localObj->groups.replace(row, temp);
 		int lol=localObj->currentNote;
@@ -52,9 +52,9 @@ void sortGroup::getDownItem()
 {
 	Groups temp;
 	int row = ui.sortGroupList->currentRow();
-	temp.name=localObj->groups.value(row+1).name;
-	if(row!=localObj->currentNote || localObj->currentNote==0 )
+	if(row!=localObj->currentNote)
 	{
+		temp.name=localObj->groups.value(row+1).name;
 		localObj->groups.replace(row+1, localObj->groups[row]);
 		localObj->groups.replace(row, temp);
 

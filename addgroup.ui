@@ -17,13 +17,6 @@
    <item row="0" column="1">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QPushButton" name="addGroupsFind">
-       <property name="text">
-        <string>Поиск</string>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QPushButton" name="addingGroupAdd">
        <property name="text">
         <string>Добавить</string>
@@ -83,7 +76,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="addGroupCount">
        <property name="text">
         <string>количество</string>
        </property>

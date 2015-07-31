@@ -16,6 +16,8 @@ public:
 	FunctionsPeople *localObj;
 	private slots:
 		void addPeopleAdd();
+signals:
+		void update();
 
 private:
 	Ui::addPeople ui;

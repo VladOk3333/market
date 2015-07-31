@@ -34,3 +34,34 @@ bool FunctionsViruchka::SaveViruchkaFile(QString filename)
 	}
 	return false;
 }
+
+bool FunctionsViruchka::LoadViruchkaFile(QString filename)
+{
+
+	QFile file(filename);
+	viruchka temp;
+	if(file.open(QIODevice::ReadOnly))
+	{
+		QDataStream tmp(&file);
+		int j=0;
+		tmp>>j;
+
+		if(j){
+		for(int i=0; i<j;i++)
+		{
+			
+			tmp>>temp.date;
+			tmp>>temp.DLC;
+			tmp>>temp.kurs;
+			tmp>>temp.summD;
+			tmp>>temp.summR;
+			vir.append(temp);
+			int k=0;
+		}
+		}
+			return true;
+	}
+	return false;
+
+	
+}

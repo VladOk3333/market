@@ -24,6 +24,7 @@ private:
 		void prihodExit();
 		void addViruchkaAdd();
 		void showListViruchka();
+		void updateTableWidget();
 };
 
 #endif // PRIHOD_H

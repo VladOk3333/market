@@ -40,6 +40,8 @@ private:
 		void addClientAdd();
 		void showListPeople();
 		void addPeopleExit();
+		void updateTablePeople();
+		void deletePeople();
 };
 
 #endif // ADDGROUP_H

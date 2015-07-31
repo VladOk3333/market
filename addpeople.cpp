@@ -40,6 +40,7 @@ void addPeople::addPeopleAdd()
 	temp.peopleContact=ui.contact->text();
 	temp.peopleAddon=ui.DLC->text();
 	localObj->addPeople(temp);
-
+	emit update();
+	this->close();
 
 }

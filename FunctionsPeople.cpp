@@ -50,3 +50,47 @@ bool FunctionsPeople::SavePeopleFile(QString filename)
 	}
 	return false;
 }
+bool FunctionsPeople::LoadPeopleFile(QString filename)
+{
+
+	QFile file(filename);
+	People temp;
+	if(file.open(QIODevice::ReadOnly))
+	{
+		QDataStream tmp(&file);
+		int j=0;
+		tmp>>j;
+
+		if(j){
+		for(int i=0; i<j;i++)
+		{
+			
+			tmp>>temp.peopleAddon;
+			tmp>>temp.peopleBank;
+			tmp>>temp.peopleBIK;
+			tmp>>temp.peopleBuh;
+			tmp>>temp.peopleContact;
+			tmp>>temp.peopleDirector;
+			tmp>>temp.peopleFactAddr;
+			tmp>>temp.peopleFax;
+			tmp>>temp.peopleFullName;
+			tmp>>temp.peopleGruz;
+			tmp>>temp.peopleINN;
+			tmp>>temp.peopleKorSchet;
+			tmp>>temp.peopleKPP;
+			tmp>>temp.peopleMail;
+			tmp>>temp.peopleMetro;
+			tmp>>temp.peopleName;
+			tmp>>temp.peopleOKPO;
+			tmp>>temp.peopleOKVED;
+			tmp>>temp.peoplePhones;
+			tmp>>temp.peopleSchet;
+			tmp>>temp.peopleUrAddr;
+			peoples.append(temp);
+			int k=0;
+		}
+		}
+			return true;
+	}
+	return false;
+}

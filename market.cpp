@@ -17,6 +17,8 @@ market::market(QWidget *parent, Qt::WFlags flags)
 
 	object.LoadGroupFile("groups.mkt");
 	object1.LoadProdFile("products.mkt");
+	virObj.LoadViruchkaFile("viruchka.mkt");
+	peopleObj.LoadPeopleFile("people.mkt");
 
 }
 
@@ -75,3 +77,4 @@ void market::closeApp()
 {
 	 exit (EXIT_SUCCESS);
 }
+

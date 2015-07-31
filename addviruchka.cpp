@@ -15,7 +15,7 @@ addViruchka::~addViruchka()
 
 void addViruchka::addingViruchkaAdd()
 {
-	
+
 	viruchka temp;
 	temp.date=(ui.virData->date().toString());
 	temp.DLC=ui.virDLC->text();
@@ -24,4 +24,6 @@ void addViruchka::addingViruchkaAdd()
 	temp.summR=ui.virRub->value();
 	
 	localObj->addVir(temp);
+	emit update();
+	this->close();
 }

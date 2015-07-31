@@ -31,6 +31,7 @@ private slots:
 	void updateTable();
 	void deleteTov();
 	void addProdIzm();
+	void changeList();
 };
 
 #endif // SPRAVTOVAR_H

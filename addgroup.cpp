@@ -50,6 +50,7 @@ void addGroup::showListGroups()
 		localObj->currentNote--;
 		ui.listGroups->setCurrentRow(localObj->currentNote);
 	}
+	ui.addGroupCount->setText(QString::number(size));
 }
 void addGroup::updateTable() {
 	ui.listGroups->clear();
@@ -108,13 +109,22 @@ addGroup::addGroup(FunctionsPeople &peopleObj,QWidget *parent)
 	peopleObj1=&peopleObj;
 	connect(ui.addingGroupAdd, SIGNAL(clicked(bool)), this, SLOT(addClientAdd()));
 	connect(ui.addGroupExit, SIGNAL(clicked(bool)), this, SLOT(addPeopleExit()));
+	connect(ui.addGroupDel, SIGNAL(clicked(bool)), this, SLOT(deletePeople()));
+
+	
 	window3 = new addPeople(*peopleObj1,this);
 
 	showListPeople();
 }
 void addGroup::addClientAdd()
 {
+	int fff=connect(window3, SIGNAL(update()), this, SLOT(updateTablePeople()));
 	window3->show();
+	/*
+	window1 = new sortGroup(*localObj, this);
+	int upd2 = connect(window1, SIGNAL(update()), this, SLOT(updateTable()));
+	window1->show();
+	*/
 	
 }
 void addGroup::showListPeople()
@@ -131,11 +141,11 @@ void addGroup::showListPeople()
 		ui.listGroups->setCurrentRow(peopleObj1->currentNote);
 	}
 }
-/*void addGroup::updateTablePeople() {
+void addGroup::updateTablePeople() {
 	ui.listGroups->clear();
 	showListPeople();
 
-}*/
+}
 
 
 //void addGroup::showListPeople2(){}
@@ -143,4 +153,32 @@ void addGroup::addPeopleExit()
 {
 	peopleObj1->SavePeopleFile("people.mkt");
 	this->close();
+}
+void addGroup::deletePeople()
+{
+	int prevActiveItem=0;
+	if(peopleObj1->peoples.count()!=0)
+	{
+	peopleObj1->peoples.remove(ui.listGroups->currentRow());
+	
+	prevActiveItem=ui.listGroups->currentRow();		
+	ui.listGroups->clear();
+	showListPeople();
+
+
+	
+	if(peopleObj1->peoples.count()!=0)
+	{
+
+		if(prevActiveItem==0)
+		{
+			ui.listGroups->setCurrentRow(prevActiveItem);
+			
+			int c=0;
+		}
+
+		else ui.listGroups->setCurrentRow(prevActiveItem-1);
+	}
+}
+
 }
